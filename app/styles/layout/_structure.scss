@@ -1,0 +1,12 @@
+.wrapper {
+  max-width: $wrapper;
+  margin: 0 auto;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  border-left: 1px solid $primary-color;
+  border-right: 1px solid $primary-color;
+}
+

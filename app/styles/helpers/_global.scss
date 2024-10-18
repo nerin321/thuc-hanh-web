@@ -1,0 +1,24 @@
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  background-color: #010101;
+  color: white;
+  
+}
+button{
+  @include linearColor("primary-left");
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+}
+
+a {
+  color: white;
+}

@@ -1,0 +1,146 @@
+.footer {
+  &-container {
+    padding: 73px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../images/Union-red-left.png");
+      background-size: cover;
+      @include size(61px);
+      top: -31px;
+      right: -30px;
+    }
+  }
+  &-top {
+    display: flex;
+    // justify-content: space-between;
+    gap: 149px;
+  }
+  &-title {
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 29px;
+  }
+  &-desc {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  &-list {
+    &-title {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+    &-item {
+      font-size: 15px;
+      line-height: 167%;
+      text-wrap: nowrap;
+    }
+  }
+  &-bot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 90px;
+    font-size: 18px;
+    font-weight: 500;
+    &-list {
+      display: flex;
+      gap: 52px;
+    }
+  }
+  &-social {
+    display: flex;
+    gap: 22px;
+    & a {
+      font-size: 18px;
+    }
+    &-item {
+      @include size(50px);
+      border-radius: 9999px;
+      border: 1px solid white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  @include maxWidth(1440px) {
+    &-top {
+      gap: 80px;
+    }
+  }
+  @include maxWidth(1024px) {
+    &-container {
+      &::before {
+        @include size(41px);
+        top: -21px;
+        right: -21px;
+      }
+    }
+    &-top {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &-bot {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    &-licese {
+      grid-column: span 2;
+    }
+  }
+  @include maxWidth(768px) {
+    &-container {
+      &::before {
+        @include size(31px);
+        top: -16px;
+        right: -16px;
+      }
+    }
+    &-top {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 60px;
+    }
+    &-logo {
+      grid-column: span 3;
+    }
+    &-bot {
+      display: block;
+      &-list {
+        margin: 20px 0;
+      }
+    }
+  }
+  @include maxWidth(426px) {
+    &-container {
+      padding: 20px;
+      &::before {
+        @include size(21px);
+        top: -11px;
+        right: -11px;
+      }
+    }
+    & p {
+      font-size: 10px;
+    }
+    &-top {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+    &-logo {
+      grid-column: span 2;
+    }
+    &-bot {
+      margin-top: 25px;
+      font-size: 11px;
+    }
+    &-social-item {
+      @include size(30px);
+      & a {
+        font-size: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,500 @@
+.header {
+  border-bottom: 1px solid $primary-color;
+  &-container {
+    position: relative;
+    padding: 110px 58px 134px 82px;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../images/Union-yellow-left.png");
+      background-size: cover;
+      @include size(61px);
+      top: -31.5px;
+      right: -30.5px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../images/Union-red.png");
+      background-size: cover;
+      @include size(61px);
+      bottom: -33px;
+      left: -30px;
+    }
+  }
+  &-img {
+    position: absolute;
+    top: 14.6%;
+    left: 22.2%;
+    z-index: 0;
+  }
+  &-bg-text {
+    font-family: $secondary-font;
+    font-size: 197.6px;
+    font-weight: bold;
+    text-align: center;
+  }
+  &-mid {
+    position: inherit;
+    margin-top: 157px;
+    @include flexBox(center, space-between);
+    z-index: 10;
+    &-left {
+      position: relative;
+      @include flexBox;
+      height: 272px;
+      &-title {
+        font-size: 25px;
+        font-weight: 600;
+        margin-bottom: 18px;
+      }
+      &-desc {
+        width: 264px;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      &-img {
+        margin-top: 12px;
+        position: absolute;
+        right: -60%;
+      }
+    }
+    &-right {
+      text-align: right;
+      width: 344px;
+      &-title {
+        font-size: 36px;
+        margin-bottom: 44px;
+        & span {
+          font-weight: 600;
+        }
+      }
+      &-desc {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 32px;
+      }
+      &-btn {
+        margin-top: 58px;
+        font-size: 17px;
+        font-weight: 600;
+      }
+    }
+  }
+  &-bottom {
+    position: inherit;
+    margin-top: 95px;
+    @include flexBox;
+    gap: 100px;
+    z-index: 10;
+    &-left {
+      @include flexBox(center);
+      gap: 44px;
+      border: 1px solid #f0b71f;
+      border-radius: 20px;
+      padding: 34px;
+      width: 45%;
+      &-number {
+        font-size: 58px;
+        font-weight: 600;
+        color: #f0b71f;
+      }
+      &-title {
+        font-size: 28px;
+        font-weight: 500;
+        padding: 22px 0;
+      }
+      &-desc {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 32px;
+      }
+    }
+    &-right {
+      @include flexBox(center, space-between);
+      width: 48%;
+    }
+    &-art {
+      width: 264px;
+      &-title {
+        text-transform: uppercase;
+        font-size: 36px;
+        line-height: 1.2;
+        & span {
+          font-weight: 600;
+        }
+      }
+      &-desc {
+        margin-top: 44px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 32px;
+      }
+    }
+    &-ex {
+      padding: 36px;
+      border: 1px solid #f0b71f;
+      border-radius: 20px;
+      width: 258px;
+      background-color: rgba(255, 255, 255, 0.1);
+      &-number {
+        font-size: 83px;
+        font-weight: 600;
+        color: #f0b71f;
+      }
+      &-text {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 1.3;
+      }
+    }
+  }
+  @include maxWidth(1787px) {
+    &-bg-text {
+      font-size: 160px;
+    }
+    &-img {
+      width: 58%;
+      left: 22%;
+      top: 15.6%;
+    }
+    &-mid {
+      margin-top: 135px;
+      &-left {
+        &-title {
+          font-size: 20px;
+        }
+        &-desc {
+          font-size: 14px;
+          width: 225px;
+        }
+        &-img {
+          right: -46%;
+          width: 69%;
+        }
+      }
+      &-right {
+        width: 280px;
+        &-title {
+          font-size: 30px;
+          margin-bottom: 30px;
+        }
+        &-desc {
+          font-size: 16px;
+          line-height: 27px;
+        }
+        &-btn {
+          margin-top: 40px;
+          font-size: 15px;
+        }
+      }
+    }
+    &-bottom {
+      gap: 50px;
+      &-left {
+        padding: 20px;
+        gap: 25px;
+        &-img {
+          height: 220px;
+        }
+        &-number {
+          font-size: 45px;
+        }
+        &-title {
+          font-size: 23px;
+          padding: 18px 0;
+        }
+        &-desc {
+          font-size: 14px;
+          line-height: 25px;
+        }
+      }
+      &-art {
+        width: 215px;
+
+        &-title {
+          font-size: 25px;
+        }
+        &-desc {
+          margin-top: 30px;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 25px;
+        }
+      }
+      &-ex {
+        width: 215px;
+        &-number {
+          font-size: 70px;
+        }
+        &-text {
+          font-size: 23px;
+        }
+      }
+    }
+  }
+  @include maxWidth(1480px) {
+    &-bg-text {
+      font-size: 140px;
+    }
+  }
+  @include maxWidth(1317px) {
+    &-bg-text {
+      font-size: 130px;
+    }
+  }
+  @include maxWidth(1024px) {
+    &-container {
+      padding: 110px 48px 134px;
+      &::before {
+        @include size(41px);
+        top: -21px;
+        right: -21px;
+      }
+      &::after {
+        @include size(41px);
+        bottom: -21px;
+        left: -21px;
+      }
+    }
+    &-bg-text {
+      font-size: 100px;
+    }
+    &-mid {
+      &-left {
+        &-title {
+          font-size: 15px;
+        }
+        &-desc {
+          font-size: 10px;
+          width: 155px;
+        }
+        &-img {
+          right: -25%;
+          width: 45%;
+        }
+      }
+      &-right {
+        width: 180px;
+        &-title {
+          font-size: 20px;
+          margin-bottom: 25px;
+        }
+        &-desc {
+          font-size: 12px;
+          line-height: 20px;
+        }
+        &-btn {
+          margin-top: 30px;
+          font-size: 12px;
+        }
+      }
+    }
+    &-bottom {
+      &-left {
+        width: 50%;
+        &-img {
+          height: 150px;
+        }
+        &-number {
+          font-size: 30px;
+        }
+        &-title {
+          font-size: 15px;
+        }
+        &-desc {
+          font-size: 10px;
+          line-height: 16px;
+        }
+      }
+      &-art {
+        width: 155px;
+        &-title {
+          font-size: 18px;
+        }
+        &-desc {
+          margin-top: 20px;
+          font-size: 10px;
+          font-weight: 500;
+          line-height: 17px;
+        }
+      }
+      &-ex {
+        width: 150px;
+        &-number {
+          font-size: 45px;
+        }
+        &-text {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  @include maxWidth(768px) {
+    &-container {
+      padding: 52px 24px 79px;
+      &::before {
+        @include size(31px);
+        top: -16px;
+        right: -16px;
+      }
+      &::after {
+        @include size(31px);
+        bottom: -16px;
+        left: -16px;
+      }
+    }
+    &-bg-text {
+      font-size: 75px;
+    }
+    &-img {
+      width: 55%;
+      left: 23%;
+      top: 11.6%;
+    }
+    &-mid {
+      &-left {
+        height: fit-content;
+      }
+      margin-top: 49px;
+      &-left-title {
+        font-size: 12px;
+        margin-bottom: 13px;
+      }
+      &-left-desc {
+        font-size: 8px;
+        width: 134px;
+      }
+      &-left-img {
+        margin-top: 8px;
+        right: -20%;
+        width: 47%;
+      }
+      &-right {
+        &-title {
+          font-size: 16px;
+          margin-bottom: 15px;
+        }
+        &-desc {
+          font-size: 9px;
+          line-height: 14px;
+        }
+        &-btn {
+          margin-top: 22px;
+          font-size: 9px;
+        }
+      }
+    }
+    &-bottom {
+      margin-top: 67px;
+      display: block;
+      &-left {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      &-right {
+        justify-content: space-around;
+        width: 100%;
+      }
+    }
+  }
+  @include maxWidth(426px) {
+    &-container {
+      padding: 30px 20px 50px;
+      &::before {
+        @include size(21px);
+        top: -11px;
+        right: -11px;
+      }
+      &::after {
+        @include size(21px);
+        bottom: -11px;
+        left: -11px;
+      }
+    }
+    &-bg-text {
+      font-size: 35px;
+    }
+    &-img {
+      width: 47%;
+      left: 27%;
+      top: 9.5%;
+    }
+    &-mid {
+      margin-top: 13px;
+      align-items: flex-start;
+      &-left {
+        padding-top: 20px;
+        &-title {
+          font-size: 8px;
+        }
+        &-desc {
+          font-size: 6px;
+          width: 100px;
+        }
+        &-img {
+          margin-top: 5px;
+          right: -14%;
+          width: 47%;
+        }
+      }
+      &-right {
+        width: 100px;
+        &-title {
+          font-size: 10px;
+          margin-bottom: 10px;
+        }
+        &-desc {
+          font-size: 6px;
+          line-height: 12px;
+        }
+        &-btn {
+          margin-top: 11px;
+          font-size: 6px;
+          padding: 8px 12px;
+        }
+      }
+    }
+    &-bottom {
+      margin-top: 20px;
+      &-left {
+        &-img {
+          height: 100px;
+        }
+        &-number {
+          font-size: 20px;
+        }
+        &-title {
+          font-size: 12px;
+          padding: 10px 0;
+        }
+        &-desc {
+          font-size: 8px;
+          line-height: 13px;
+        }
+      }
+
+      &-art {
+        &-title {
+          font-size: 12px;
+        }
+        &-desc {
+          margin-top: 10px;
+          font-size: 8px;
+          font-weight: 500;
+          line-height: 14px;
+        }
+      }
+      &-ex {
+        padding: 20px;
+        width: min-content;
+        &-number {
+          font-size: 25px;
+        }
+        &-text {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}

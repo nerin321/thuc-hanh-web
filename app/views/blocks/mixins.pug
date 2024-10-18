@@ -1,0 +1,35 @@
+mixin infoItem (number, text)
+    .about-top-info-item 
+        p.about-top-info-number= number 
+        p.about-top-info-text= text 
+
+mixin bannerItem(color, text)
+    .banner-item
+        if color == "yellow"
+            .banner-box-yellow 
+        if color == "red"
+            .banner-box-red 
+        .banner-main 
+            h3.banner-text= text 
+            i.fa.fa-arrow-right.banner-icon 
+
+mixin faqItem(number, title, desc="A realm where advanced technology meets dystopian reality. Our website is your gateway....")
+    .faq-item 
+        p.faq-number= number
+        .faq-main 
+            p.faq-main-title= title
+            p.faq-main-desc= desc 
+
+mixin serviceItem(src="./images/service-icon.png", title, desc= "Explore the high-tech, low-life world where the lines between humanity ")
+    .service-item 
+        img.service-item-img(src= src, alt="")
+        .service-item-content 
+            h3.service-item-title= title
+            p.service-item-desc= desc
+
+mixin footerList(title, item1, item2, item3)
+    .footer-list
+        p.footer-list-title= title 
+        p.footer-list-item= item1
+        p.footer-list-item= item2
+        p.footer-list-item= item3
