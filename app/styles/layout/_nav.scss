@@ -1,0 +1,93 @@
+.nav {
+  border-bottom: 1px solid $primary-color;
+  &-container {
+    position: relative;
+    @include flexBox(center, space-between);
+    padding: 52px;
+    &::after {
+      content: "";
+      background-image: url("../images/Union-red.png");
+      background-size: cover;
+      @include size(61px);
+      position: absolute;
+      bottom: -29px;
+      left: -30px;
+    }
+  }
+  &-toggle {
+    display: none;
+  }
+  &-list {
+    @include flexBox();
+    gap: 50px;
+    & a {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+  &-start {
+    border: 1px solid #979797;
+    padding: 12px 25px;
+    border-radius: 8px;
+    @include linearColor(primary-left);
+    font-size: 17px;
+    font-weight: 600;
+  }
+  @include maxWidth(1024px) {
+    &-container::after {
+      @include size(41px);
+      position: absolute;
+      bottom: -21px;
+      left: -21px;
+    }
+  }
+  @include maxWidth(768px) {
+    &-container::after {
+      @include size(31px);
+      bottom: -16px;
+      left: -16px;
+    }
+    &-toggle {
+      display: block;
+    }
+    &-list {
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      background-color: white;
+      width: 15rem;
+      display: block;
+      padding: 50px 25px;
+      z-index: 15;
+      transform: translateX(-100%);
+      transition: transform 0.5s ease-in-out;
+    }
+    &-list.is-expand {
+      transform: translateX(0%);
+    }
+    &-item {
+      text-align: center;
+      padding: 15px;
+      & a {
+        color: black;
+      }
+    }
+  }
+  @include maxWidth(426px) {
+    &-container {
+      padding: 20px;
+      &::after {
+        @include size(21px);
+        bottom: -11px;
+        left: -11px;
+      }
+    }
+    &-start {
+      display: none;
+    }
+    &-toggle {
+      padding: 8px 13px;
+    }
+  }
+}

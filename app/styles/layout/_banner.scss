@@ -1,0 +1,212 @@
+.banner {
+  border-bottom: 1px solid $primary-color;
+  &-container {
+    padding: 174px 111px 107px 83px;
+    background-color: rgba(196, 196, 196, 0.4);
+    @include flexBox();
+    gap: 164px;
+    align-items: end;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../images/Union-yellow-left.png");
+      background-size: cover;
+      @include size(61px);
+      top: -31.5px;
+      right: -30.5px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../images/Union-red-left.png");
+      background-size: cover;
+      @include size(61px);
+      bottom: -32px;
+      left: -31px;
+    }
+  }
+  &-content {
+    width: calc(65% - 82px);
+    &-title {
+      font-family: $secondary-font;
+      font-size: 69px;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+    &-desc {
+      margin: 82px 0 60px;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 32px;
+    }
+  }
+  &-list {
+    padding: 58px 63px;
+    width: calc(35% - 82px);
+    border: 1px solid $primary-color;
+    border-radius: 20px;
+  }
+  &-item {
+    @include flexBox();
+    gap: 20px;
+    &:not(:last-child) {
+      margin-bottom: 38px;
+    }
+  }
+  &-box-yellow {
+    @include size(17px);
+    background-color: $primary-color;
+  }
+  &-box-red {
+    @include size(17px);
+    background-color: $secondary-color;
+  }
+  &-main {
+    @include flexBox(start, space-between);
+    width: 100%;
+    gap: 59px;
+  }
+  &-text {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  &-icon {
+    font-size: 24px;
+  }
+  @include maxWidth(1540px) {
+    &-container {
+      padding: 135px 85px 90px 75px;
+      gap: 135px;
+    }
+    &-content {
+      &-title {
+        font-size: 50px;
+      }
+      &-desc {
+        margin: 65px 0 60px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 28px;
+      }
+    }
+    &-list {
+      padding: 37px 43px;
+      width: calc(40% - 82px);
+    }
+    &-text {
+      font-size: 18px;
+    }
+  }
+  @include maxWidth(1024px) {
+    &-container {
+      padding: 135px 85px 90px 75px;
+      gap: 55px;
+      &::before {
+        @include size(41px);
+        top: -21px;
+        right: -21px;
+      }
+      &::after {
+        @include size(41px);
+        bottom: -21px;
+        left: -21px;
+      }
+    }
+    &-content {
+      &-title {
+        font-size: 32px;
+      }
+      &-desc {
+        margin: 45px 0 40px;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 20px;
+      }
+    }
+    &-list {
+      padding: 37px 43px;
+      width: calc(40% - 82px);
+    }
+    &-text {
+      font-size: 18px;
+    }
+    &-list {
+      padding: 37px;
+      width: fit-content;
+    }
+    &-main {
+      gap: 35px;
+    }
+    &-text {
+      font-size: 14px;
+    }
+    &-icon {
+      font-size: 14px;
+    }
+  }
+  @include maxWidth(768px) {
+    &-container {
+      display: block;
+      &::before {
+        @include size(31px);
+        top: -16px;
+        right: -16px;
+      }
+      &::after {
+        @include size(31px);
+        bottom: -16px;
+        left: -16px;
+      }
+    }
+    &-content {
+      width: 100%;
+      &-title {
+        text-align: center;
+      }
+    }
+  }
+  @include maxWidth(426px) {
+    &-container {
+      padding: 20px;
+      &::before {
+        @include size(21px);
+        top: -11px;
+        right: -11px;
+      }
+      &::after {
+        @include size(21px);
+        bottom: -11px;
+        left: -11px;
+      }
+    }
+    &-content {
+      &-title {
+        font-size: 25px;
+      }
+      &-desc {
+        margin: 20px 0 25px;
+        font-size: 9px;
+        font-weight: 500;
+        line-height: 16px;
+      }
+    }
+    &-main {
+      align-items: center;
+    }
+    &-text {
+      font-size: 10px;
+    }
+    &-box-yellow {
+      @include size(13px);
+      background-color: $primary-color;
+    }
+    &-box-red {
+      @include size(13px);
+      background-color: $secondary-color;
+    }
+    &-icon {
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,281 @@
+.about {
+  border-bottom: 1px solid $primary-color;
+  &-container {
+    padding: 78px 20px 134px 62px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../images/Union-yellow-left.png");
+      background-size: cover;
+      @include size(61px);
+      top: -31.5px;
+      right: -30.5px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../images/Union-red.png");
+      background-size: cover;
+      @include size(61px);
+      bottom: -33px;
+      left: -30px;
+    }
+  }
+  &-top {
+    margin-bottom: 43px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 53px;
+    &-title {
+      font-size: 57px;
+      font-family: $secondary-font;
+      font-weight: bold;
+      line-height: 1.1;
+      & span {
+        color: #f0b71f;
+      }
+    }
+    &-desc {
+      margin: 69px 0;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 32px;
+    }
+    &-info {
+      @include flexBox(center, space-between);
+      &-number {
+        font-size: 47px;
+        font-weight: 600;
+        color: #f0b71f;
+        line-height: 2;
+      }
+      &-text {
+        font-size: 17px;
+        font-weight: 500;
+      }
+    }
+  }
+  &-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    &-content {
+      width: 90%;
+    }
+    &-title {
+      font-size: 56px;
+      font-family: $secondary-font;
+      font-weight: bold;
+      line-height: 1.1;
+      & span {
+        color: #f0b71f;
+      }
+    }
+    &-desc {
+      margin: 64px 0 60px;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 32px;
+    }
+    &-invite {
+      @include flexBox(center);
+      gap: 50px;
+      font-weight: 500;
+      border: 1px solid #f0b71f;
+      border-radius: 20px;
+      padding: 32px 40px;
+      &-title {
+        font-size: 28px;
+        margin-bottom: 22px;
+      }
+      &-desc {
+        font-size: 18px;
+        line-height: 32px;
+      }
+    }
+  }
+  @include maxWidth(1540px) {
+    &-top {
+      &-title {
+        font-size: 40px;
+      }
+      &-desc {
+        margin: 40px 0;
+        font-size: 16px;
+      }
+      &-info {
+        &-number {
+          font-size: 35px;
+        }
+        &-text {
+          font-size: 13px;
+        }
+      }
+    }
+    &-bottom {
+      &-img {
+        width: 95%;
+      }
+      &-title {
+        font-size: 40px;
+      }
+      &-desc {
+        margin: 40px 0 60px;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 28px;
+      }
+      &-invite {
+        padding: 16px 20px;
+        gap: 25px;
+        &-title {
+          font-size: 25px;
+        }
+        &-desc {
+          font-size: 14px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+  @include maxWidth(1024px) {
+    &-container {
+      &::before {
+        @include size(41px);
+        top: -21px;
+        right: -21px;
+      }
+      &::after {
+        @include size(41px);
+        bottom: -21px;
+        left: -21px;
+      }
+    }
+    &-top {
+      &-title {
+        font-size: 27px;
+      }
+      &-desc {
+        margin: 30px 0;
+        font-size: 14px;
+        line-height: normal;
+      }
+      &-info {
+        &-number {
+          font-size: 25px;
+        }
+        &-text {
+          font-size: 10px;
+        }
+      }
+    }
+    &-bottom {
+      &-img {
+        width: 95%;
+      }
+      &-title {
+        font-size: 28px;
+      }
+      &-desc {
+        margin: 30px 0 40px;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: normal;
+      }
+      &-invite {
+        padding: 16px 20px;
+        gap: 15px;
+        &-img {
+          width: 30%;
+        }
+        &-title {
+          font-size: 18px;
+        }
+        &-desc {
+          font-size: 10px;
+          line-height: normal;
+        }
+      }
+    }
+  }
+  @include maxWidth(768px) {
+    &-container {
+      &::before {
+        @include size(31px);
+        top: -16px;
+        right: -16px;
+      }
+      &::after {
+        @include size(31px);
+        bottom: -16px;
+        left: -16px;
+      }
+    }
+    &-top {
+      display: block;
+      &-content {
+        margin-bottom: 20px;
+      }
+      &-title {
+        text-align: center;
+      }
+    }
+    &-bottom {
+      display: block;
+      &-img {
+        margin-bottom: 20px;
+        width: 100%;
+      }
+      &-title {
+        text-align: center;
+      }
+    }
+  }
+  @include maxWidth(426px) {
+    &-container {
+      padding: 20px;
+      &::before {
+        @include size(21px);
+        top: -11px;
+        right: -11px;
+      }
+      &::after {
+        @include size(21px);
+        bottom: -11px;
+        left: -11px;
+      }
+    }
+    &-top {
+      &-title {
+        font-size: 20px;
+      }
+      &-desc {
+        margin: 15px 0;
+        font-size: 10px;
+      }
+      &-info-number {
+        font-size: 18px;
+      }
+      &-info-text {
+        font-size: 8px;
+      }
+    }
+    &-bottom {
+      &-title {
+        font-size: 20px;
+      }
+      &-desc {
+        margin: 15px 0;
+        font-size: 10px;
+      }
+      &-invite-title {
+        font-size: 12px;
+        margin-bottom: 15px;
+      }
+      &-invite-desc {
+        font-size: 8px;
+      }
+    }
+  }
+}
